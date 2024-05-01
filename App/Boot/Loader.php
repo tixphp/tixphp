@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Boot;
 
 use AllowDynamicProperties;
+use App\Library\Routes;
 use Tix\Http\Request;
 use Tix\Routing\Router;
 
@@ -37,6 +38,8 @@ use Tix\Routing\Router;
    */
   public function initialization(): void
   {
-    $this->router->load();
+    $this->router->load(
+      (new Routes([], __DIR__ . '/../Config/web.php'))->getRoutes()
+    );
   }
 }
