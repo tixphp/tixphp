@@ -5,7 +5,8 @@ declare(strict_types=1);
 return [
 
   'GET' => [
-    '/home' => 'controller:index@home',
+    '/index' => 'controller:Frontend/Home/IndexController@home',
+    '/home' => 'controller:home/index@home',
     '/contacts' => 'view:common/home'
   ],
 
