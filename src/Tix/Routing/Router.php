@@ -44,4 +44,8 @@ use Tix\Http\Request;
     return $this->routerQuery->getQuery($this->request->getUriParams());
   }
 
+  protected function s() {
+
+  }
+
 }
